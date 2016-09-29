@@ -1,6 +1,6 @@
 ## PageView
   - An easy way to use Tabbar NavigationBar
-  
+  - 切换有颜色渐变效果
 ## How to use PageView
   - copy file to your project file
   
