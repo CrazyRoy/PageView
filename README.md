@@ -17,6 +17,7 @@
        func pageTitltView(titleView: PageTitleView, selectedIndex index: Int)
     ```
   - create PageContentView
+  
     ```swift
        var childVcs = [UIViewController]()
        for _ in 0..<4 {
@@ -26,6 +27,7 @@
        let pageContentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
     ```
   - implement pageContentDelegate method in viewController
+  
     ```swift
        func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
     ```
