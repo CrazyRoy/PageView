@@ -4,16 +4,16 @@
 ## How to use PageView
   - copy file to your project file
   ![image]()
-    - create PageTitleView
+  - create PageTitleView
     ```swift
         let titles = ["推荐", "游戏", "娱乐", "体育"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
     ```
-    - implement pageTitleViewDelegate method in viewController
+  - implement pageTitleViewDelegate method in viewController
     ```swift
         func pageTitltView(titleView: PageTitleView, selectedIndex index: Int)
     ```
-    - create PageContentView
+  - create PageContentView
     ```swift
         var childVcs = [UIViewController]()
         for _ in 0..<4 {
@@ -22,7 +22,7 @@
         }
         let pageContentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
     ```
-    - implement pageContentDelegate method in viewController
+  - implement pageContentDelegate method in viewController
     ```swift
         func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
     ```
