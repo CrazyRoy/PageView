@@ -58,7 +58,6 @@ extension ViewController {
         view.addSubview(pageContentView)
         
     }
-
     
 }
 
