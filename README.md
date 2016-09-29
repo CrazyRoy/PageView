@@ -4,7 +4,7 @@
 ## How to use PageView
   - copy file to your project file
   
-  ![image]()
+  ![image](https://github.com/coderLL/PageView/blob/master/step.png)
   - create PageTitleView
   
     ```swift
