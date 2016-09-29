@@ -5,11 +5,13 @@
   - copy file to your project file
   ![image]()
   - create PageTitleView
+  
     ```swift
         let titles = ["推荐", "游戏", "娱乐", "体育"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
     ```
   - implement pageTitleViewDelegate method in viewController
+  
     ```swift
         func pageTitltView(titleView: PageTitleView, selectedIndex index: Int)
     ```
