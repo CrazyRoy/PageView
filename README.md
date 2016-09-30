@@ -34,7 +34,7 @@
     ```
   
 ## Preview
-  ![image](https://github.com/coderLL/PageView/blob/master/Run.gif)
+  <img src="https://github.com/coderLL/PageView/blob/master/Run.gif" width=320 height=568 />
   
 ## 后期完善
   - 1. 颜色自定义
