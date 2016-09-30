@@ -5,7 +5,7 @@
 ## How to use PageView
   - copy file to your project file
   
-  ![image](https://github.com/coderLL/PageView/blob/master/step.png)
+  <img src="https://github.com/coderLL/PageView/blob/master/step.png" width=200 height=130 />
   - create PageTitleView
   
     ```swift
