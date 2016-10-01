@@ -88,7 +88,7 @@ extension PageTitleView {
             label.text = title
             label.tag = index
             label.font = UIFont.systemFontOfSize(16.0)
-            label.textColor = UIColor.orangeColor()
+            label.textColor = UIColor(red: kNormalColor.0/255.0, green: kNormalColor.1/255.0, blue: kNormalColor.2/255.0, alpha: 1.0)
             label.textAlignment = .Center
             
             // 3.设置Label的frame
@@ -101,7 +101,7 @@ extension PageTitleView {
             
             // 5.给Lable添加手势
             label.userInteractionEnabled = true
-            let tapGes = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick(_:)))
+            let tapGes = UITapGestureRecognizer(target: self, action: Selector("titleLabelClick:"))
             label.addGestureRecognizer(tapGes)
         }
     }
@@ -117,7 +117,7 @@ extension PageTitleView {
         // 2.添加滚动的滑块
         // 2.1 获取第一个Label
         guard let firstLabel = titleLabels.first else { return}
-        firstLabel.textColor = UIColor.orangeColor()
+        firstLabel.textColor = UIColor(red: kSelectColor.0/255.0, green: kSelectColor.1/255.0, blue: kSelectColor.2/255.0, alpha: 1.0)
         // 2.2 设置scrollLine的属性
         scrollView.addSubview(scrollLine)
         
@@ -128,15 +128,18 @@ extension PageTitleView {
 // MARK:- 监听Label的点击
 extension PageTitleView {
     @objc private func titleLabelClick(tapGes: UITapGestureRecognizer) {
-        // 1.获取当前Label
+        // 0.获取当前Label
         guard let currentLabel = tapGes.view as? UILabel else  { return }
+        
+        // 1.判断是否是重复点击同一个Label, 若是则直接返回
+        if currentLabel.tag == currentIndex { return }
         
         // 2.获取之前的Label
         let oldLabel = titleLabels[currentIndex]
         
         // 3.切换文字的颜色
-        currentLabel.textColor = UIColor.orangeColor()
-        oldLabel.textColor = UIColor.darkGrayColor()
+        currentLabel.textColor = UIColor(red: kSelectColor.0/255.0, green: kSelectColor.1/255.0, blue: kSelectColor.2/255.0, alpha: 1.0)
+        oldLabel.textColor = UIColor(red: kNormalColor.0/255.0, green: kNormalColor.1/255.0, blue: kNormalColor.2/255.0, alpha: 1.0)
         
         // 4.保存更新Label的下标值
         currentIndex = currentLabel.tag
