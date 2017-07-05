@@ -10,7 +10,7 @@
   
 - create PageTitleView
 
-   ```objc
+   ```swift
       let titles = ["推荐", "游戏", "娱乐", "体育"]
       let titleView = PageTitleView(frame: titleFrame, titles: titles)
    ```
